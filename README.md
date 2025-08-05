@@ -13,7 +13,10 @@ The scenario involves **MapleTech Solutions**, a growing Canadian cloud-native c
 All policies were grouped into a **Policy Initiative** for easier management and assigned to a Resource Group with **Enforcement mode enabled**.
 
 ---
+## Youtube Video Link
+[Youtube demo](https://youtu.be/AG2jUhb8TY0)
 
+---
 ##  Lab Objectives
 - Create **three custom Azure Policies**:
   1. **Only-CanadaCentral** – Restricts deployments to the Canada Central region.
