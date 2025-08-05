@@ -2,7 +2,7 @@
 
 # Azure Policy Lab – MapleTech Secure Foundation
 
-## 📌 Summary
+##  Summary
 This lab demonstrates the implementation of governance, security, and compliance controls in Azure using **Azure Policy**.  
 
 The scenario involves **MapleTech Solutions**, a growing Canadian cloud-native company, where developers are:
@@ -10,16 +10,11 @@ The scenario involves **MapleTech Solutions**, a growing Canadian cloud-native c
 - Exposing public IP addresses
 - Skipping mandatory tags
 
-As a **Cloud Security Engineer**, my mission was to create guardrails to enforce:
-1. Resource deployment restricted to **Canada Central** region.
-2. Mandatory `ProjectName` tag for all resources.
-3. No public IP addresses allowed.
-
 All policies were grouped into a **Policy Initiative** for easier management and assigned to a Resource Group with **Enforcement mode enabled**.
 
 ---
 
-## 🎯 Lab Objectives
+##  Lab Objectives
 - Create **three custom Azure Policies**:
   1. **Only-CanadaCentral** – Restricts deployments to the Canada Central region.
   2. **Require-ProjectName-Tag** – Requires a `ProjectName` tag.
@@ -30,7 +25,7 @@ All policies were grouped into a **Policy Initiative** for easier management and
 
 ---
 
-## 🛡 Policies
+## Policies
 
 ### 1. Only-CanadaCentral
 **Effect:** Deny  
@@ -111,7 +106,7 @@ All policies were grouped into a **Policy Initiative** for easier management and
 
 ---
 
-## 🗂 Policy Initiative
+##  Policy Initiative
 **Name:** MapleTech Secure Foundation  
 **Category:** Security  
 **Policies Included:**
@@ -123,6 +118,19 @@ All policies were grouped into a **Policy Initiative** for easier management and
 **Enforcement Mode:** **Enabled** (Deny non-compliant resources)
 
 ---
+
+##  Lessons Learned
+- **Azure Policy** provides proactive enforcement — resources are blocked before deployment if non-compliant.
+- Grouping policies into an **initiative** simplifies management and ensures consistent governance.
+- **Enforcement Mode** must be enabled for Deny effects to take effect — otherwise policies only audit.
+- Tagging policies help maintain cost management, compliance, and organizational visibility.
+
+---
+
+## Challenges
+- Remembering to enable **Policy Enforcement** during assignment — otherwise test cases won’t deny resources.
+- Deploying via the Azure Portal is straightforward, but for automation, **ARM/Bicep** templates would be more efficient.
+- Testing policies requires creating/destroying resources, which can consume time and budget if not planned.
 
 ## 🔍 Test Cases
 
