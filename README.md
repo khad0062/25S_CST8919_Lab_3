@@ -1,6 +1,6 @@
 # 25S_CST8919_Lab_3
 
-# Azure Policy Lab – MapleTech Secure Foundation
+# Cloud Governance Gone Rogue – Azure Policy Lab
 
 ##  Summary
 This lab demonstrates the implementation of governance, security, and compliance controls in Azure using **Azure Policy**.  
@@ -132,24 +132,4 @@ All policies were grouped into a **Policy Initiative** for easier management and
 - Deploying via the Azure Portal is straightforward, but for automation, **ARM/Bicep** templates would be more efficient.
 - Testing policies requires creating/destroying resources, which can consume time and budget if not planned.
 
-## 🔍 Test Cases
 
-| Test Action | Expected Result | Outcome |
-|-------------|----------------|---------|
-| Deploy VM in East US | ❌ Denied | ✅ Passed |
-| Deploy Storage Account without `ProjectName` tag | ❌ Denied | ✅ Passed |
-| Create a Public IP | ❌ Denied | ✅ Passed |
-| Deploy VM in Canada Central with `ProjectName` tag | ✅ Allowed | ✅ Passed |
-
----
-
-## 📸 Screenshots
-Screenshots are stored in the `/screenshots` folder:
-- `east-us-denied.png`
-- `no-tag-denied.png`
-- `public-ip-denied.png`
-- `canada-central-success.png`
-
----
-
-## 📂 Repository Structure
